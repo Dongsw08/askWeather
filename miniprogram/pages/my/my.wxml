@@ -1,0 +1,55 @@
+<!--miniprogram/pages/my/my.wxml-->
+<wxs module="tools">
+function checkClass(city,selectArr){
+
+return  selectArr.indexOf(city) !== -1?'selected':''
+}
+
+module.exports.checkClass = checkClass;
+</wxs> 
+<view class="main">
+  <view wx:if="{{!isLogin}}" class="not-login">
+    <view class="not-login-text">
+      登陆后可以收藏城市
+    </view>
+    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" type="primary">授权登陆</button>
+  </view>
+
+  <view wx:else class="collection_management">
+    <view class="select_container">
+      <text>{{action}}</text>
+      <view class="select_button_container">
+        <button type="primary" data-action="新增" class="select_button" bindtap="toggleAction">新增</button>
+        <button type="warn" class="select_button" data-action="编辑" bindtap="toggleAction">编辑</button>
+      </view>
+    </view>
+
+    <view wx:if="{{action === '新增'}}" class="add_container">
+      <view class="search_container">
+        <mp-search placeholder="选择城市" search="{{search}}" bindselectresult="bindselectresult" />
+      </view>
+
+      <view class="collection_container">
+        <view class="collection_title">我的收藏</view>
+        <view class="city_container">
+          <view bindtap="changeSelectCity" data-city="{{item}}" class="city_name" wx:for="{{userCollection}}">
+            {{item}}
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view wx:if="{{action === '编辑'}}">
+      <view class="collection_container">
+        <view class="collection_title">我的收藏</view>
+        <view class="city_container">
+          <view bindtap="deleteCitySelect" data-city="{{item}}" class="city_name {{tools.checkClass(item,deleteColection)}}" wx:for="{{userCollection}}">
+            {{item}}
+          </view>
+        </view>
+
+        <button class="deleteButton" bindtap="onDeleteTap" type="warn">删除</button>
+      </view>
+    </view>
+  </view>
+</view>

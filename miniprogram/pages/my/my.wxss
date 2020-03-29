@@ -1,0 +1,69 @@
+/* miniprogram/pages/my/my.wxss */
+.not-login-text{
+  text-align: center;
+  margin:20px 0;
+}
+
+.collection_management{
+
+}
+
+.select_container{
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  height: 60px;
+  align-items: center;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  margin-bottom:20px;
+}
+
+.select_button{
+  width: 120px !important;
+  height: 40px !important;
+}
+
+.select_button_container{
+  display: flex;
+  width: 250px;
+  justify-content: space-between;
+}
+
+.search_container{
+  margin-bottom: 60px;
+}
+
+.collection_container{
+
+}
+
+.city_container{
+  display: flex;
+  box-sizing: border-box;
+  padding-right: 20px;
+  flex-wrap: wrap;
+}
+
+.city_name{
+  min-width: 80px;
+  text-align: center;
+  height: 32px;
+  line-height: 32px;
+  border: 1px solid #000;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.collection_title{
+  margin:10px 0;
+}
+
+.deleteButton{
+  margin-top:20px;
+}
+
+.selected{
+  background: #1890ff;
+  color:#fff;
+  border:1px solid #1890ff;
+}

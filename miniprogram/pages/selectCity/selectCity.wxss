@@ -1,0 +1,33 @@
+/* miniprogram/pages/selectCity/selectCity.wxss */
+.search_container{
+  padding:15px;
+}
+
+.search_input{
+  width:230px;
+  border: 1px solid grey;
+  height: 32px;
+  border-radius: 4px;
+  padding: 0 10px;
+  background:gainsboro;
+}
+
+.collection_container{
+  margin-top:20px;
+}
+
+.title{
+  padding-left: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.7);
+}
+
+.collections{
+  display: inline-block;
+  margin: 10px 20px;
+  box-sizing: border-box;
+  text-align: center;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 10px;
+  border:1px solid #000;
+}

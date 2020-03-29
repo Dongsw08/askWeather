@@ -1,0 +1,107 @@
+<!--index.wxml-->
+
+<wxs module="parseDate">
+  function parseDate(date) {
+    var reg = getRegExp("([^-]+)", "g")
+
+    var arr = date.match(reg)
+
+    return arr[1] + '月' + arr[2] + '日';
+  }
+
+  var styleTypes = {
+    comf:'舒适度指数',
+    cw:'洗车指数',
+    drsg:'穿衣指数',
+    flu:'感冒指数',
+    sport:'运动指数',
+    trav:'旅游指数',
+    uv:'紫外线指数',
+    air:'空气污染扩散条件指数',
+    ac:'空调开启指数',
+    ag:'过敏指数',
+    gl:'太阳镜指数',
+    mu:'化妆指数',
+    airc:'晾晒指数',
+    ptfc:'交通指数',
+    fsh:'钓鱼指数',
+    spi:'防晒指数'
+  }
+
+  module.exports.parseDate = parseDate
+  module.exports.styleTypes = styleTypes
+</wxs>
+<!-- <wxs module="foo">
+var some_msg = "hello world";
+module.exports = {
+  msg : some_msg,
+}
+</wxs> -->
+<view class="main">
+  <view class="content">
+    <view class="city">
+      <text bindtap="jumpToSelectCity">{{selectedCity}}</text>
+    </view>
+
+    <view class="now">
+      <view class="now_temp">{{nowWeather.tmp}}℃</view>
+      <view class="now_others">
+        <view class="now_others_item">
+          <view>风向:</view>
+          <view>{{nowWeather.wind_dir}}</view>
+        </view>
+        <view class="now_others_item">
+          <view>天气：</view>
+          <view>{{nowWeather.cond_txt}}</view>
+        </view>
+        <view class="now_others_item">
+          <view>风速：</view>
+          <view>{{nowWeather.wind_spd}} km/h</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="items">
+      <view class="title">
+        未来三天
+      </view>
+
+      <view class="next3days_container">
+        <canvas type="2d" id="myCanvas"></canvas>
+        <view class="next3days" wx:for="{{dailyWeather}}">
+          <view class="day_top">
+            <view class="day_detail">
+              {{parseDate.parseDate(item.date)}}
+            </view>
+            <view class="day_detail">
+              {{item.cond_txt_d!==item.cond_txt_n?item.cond_txt_d+' 转 '+ item.cond_txt_n:item.cond_txt_d}}
+            </view>
+          </view>
+
+          <view class="day_bottom">
+            {{item.wind_dir}} {{item.wind_sc + '级'}}
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="items">
+      <view class="title">
+        生活指数
+      </view>
+
+      <view class="lifeStyle_container">
+        <view class="lifeStyle" wx:for="{{lifeStyle}}">
+          <view class="lifeStyle_item">
+            {{parseDate.styleTypes[item.type]+':'}}
+          </view>
+          <view class="lifeStyle_item">
+            {{item.brf}}
+          </view>
+          
+        </view>
+      </view>
+
+    </view>
+  </view>
+</view>

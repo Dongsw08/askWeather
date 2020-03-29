@@ -1,0 +1,12 @@
+<!--components/navbar/navbar.wxml-->
+<view style="height:{{navBarHeight}}px;">
+  <view class="nav-wrap" style="background-color:{{backgroundColor}}">
+    <view style="height:{{statusBarHeight}}px;"></view>
+    <view class='content'>
+      <slot name="pp"></slot>
+      <view wx:if="{{showBack}}" class='back' bindtap='back'>
+        <text class="back_icon">{{'<'}}</text>
+      </view>
+    </view>
+  </view>
+</view>

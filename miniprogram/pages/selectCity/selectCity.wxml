@@ -1,0 +1,16 @@
+<!--miniprogram/pages/selectCity/selectCity.wxml-->
+<view class="main">
+  <view class="search_container">
+    <mp-search placeholder="选择城市" search="{{search}}" bindselectresult="bindselectresult" />
+  </view>
+
+  <view class="collection_container">
+    <view class="title">我的收藏</view>
+    <view class="collection_content">
+      <view class="collections" bindtap="selectMyLocation">我的位置</view>
+      <view wx:for="{{userCollection}}" data-city="{{item}}" bindtap="selectColletion" class="collections">
+        {{item}}
+      </view>
+    </view>
+  </view>
+</view>

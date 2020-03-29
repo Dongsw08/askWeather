@@ -1,0 +1,148 @@
+/**index.wxss**/
+
+page{
+  /* height: 100%; */
+  width: 100%;
+}
+
+.main{
+  background-image: url(https://6463-dcloud-flxmw-1301229710.tcb.qcloud.la/pic/main_back.jpg?sign=739bb262f48958bfaf3788131e739aca&t=1583844754);
+  background-size: 100% 100%;
+  height: 100%;
+  width: 100%;
+  background-attachment: fixed;
+  overflow: auto;
+}
+
+.city{
+  text-align:center;
+  margin:30rpx 0;
+}
+
+.now{
+  height: 400rpx;
+}
+
+.now_temp{
+  height: 280rpx;
+  line-height: 280rpx;
+  text-align: center;
+  font-size:60px;
+  color:#fff;
+}
+
+.now_others{
+  display: flex;
+  box-sizing:border-box;
+  /* border-top: 1px solid rgba(255,255,255,0.3); */
+  /* border-bottom: 1px solid rgba(255,255,255,0.3); */
+  padding:10px 0;
+  width:90%;
+  margin:0 auto;
+}
+
+.now_others_item{
+  height: 100rpx;
+  flex:1;
+  text-align:center;
+  box-sizing: border-box;
+  /* border-right:1px solid rgba(255,255,255,0.3); */
+}
+
+.now_others_item:last-child{
+  border:none;
+}
+
+.now_others_item view{
+  height: 50%;
+  line-height: 50rpx;
+}
+
+.now_others_item view:last-child{
+  color:#fff;
+}
+
+.items{
+  margin:20px 0;
+}
+
+.items .title{
+  padding-left: 15px;
+  height: 32px;
+  line-height: 32px;
+  border-bottom:1px solid rgba(255,255,255,0.7);
+}
+
+.next3days_container{
+  height: 300px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.next3days{
+  height: 260px;
+  box-sizing: border-box;
+  flex:1;
+  border-right: 1px solid rgba(255,255,255,0.7);
+  padding:20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.next3days:last-child{
+  border:none;
+}
+
+#myCanvas{
+  height: 206px;
+  width: 100%;
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+}
+
+.day_top{
+  position: relative;
+  top:-20px;
+  text-align: center;
+  color:#fff;
+}
+
+.day_bottom{
+  position: relative;
+  bottom:-20px;
+  text-align: center;
+  color:#fff;
+}
+
+.lifeStyle_container{
+  display: flex;
+  flex-wrap: wrap;
+  padding:10px 0;
+}
+
+.lifeStyle{
+  box-sizing: border-box;
+  border-right: 1px solid rgba(255,255,255,0.7);
+  height: 60px;
+  width: 25%;
+  margin-bottom: 10px;
+}
+
+.lifeStyle:nth-child(4n){
+  border:none;
+}
+
+.lifeStyle_item{
+  text-align: center;
+  font-size: 12px;
+  color:#fff;
+  height: 30px;
+  
+}
+
+.lifeStyle_item:last-child{
+  line-height: 30px;
+}
