@@ -68,7 +68,7 @@ module.exports = {
 
       <view class="next3days_container">
         <canvas type="2d" id="myCanvas"></canvas>
-        <view class="next3days" wx:for="{{dailyWeather}}">
+        <view class="next3days" wx:for="{{dailyWeather}}" wx:key="date">
           <view class="day_top">
             <view class="day_detail">
               {{parseDate.parseDate(item.date)}}
@@ -91,7 +91,7 @@ module.exports = {
       </view>
 
       <view class="lifeStyle_container">
-        <view class="lifeStyle" wx:for="{{lifeStyle}}">
+        <view class="lifeStyle" wx:for="{{lifeStyle}}" wx:key="type">
           <view class="lifeStyle_item">
             {{parseDate.styleTypes[item.type]+':'}}
           </view>

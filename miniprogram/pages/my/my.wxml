@@ -32,7 +32,7 @@ module.exports.checkClass = checkClass;
       <view class="collection_container">
         <view class="collection_title">我的收藏</view>
         <view class="city_container">
-          <view bindtap="changeSelectCity" data-city="{{item}}" class="city_name" wx:for="{{userCollection}}">
+          <view bindtap="changeSelectCity" data-city="{{item}}" class="city_name" wx:for="{{userCollection}}" wx:key="*this">
             {{item}}
           </view>
         </view>

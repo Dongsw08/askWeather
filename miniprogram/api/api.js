@@ -2,7 +2,7 @@ const request = require('../tools/request.js')
 const get = request.get;
 const post = request.post;
 
-const key = '';
+const key = '0106aeb202664e6aa97148ea26e9fb9f';
 const data = {
   key
 }

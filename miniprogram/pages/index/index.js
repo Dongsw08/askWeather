@@ -181,11 +181,14 @@ Page({
 
       // ctx.clearRect(0,0,width,height);
 
-      const dpr = wx.getSystemInfoSync().pixelRatio
-      canvas.width = res[0].width * dpr
-      canvas.height = res[0].height * dpr
+      // const dpr = wx.getSystemInfoSync().pixelRatio
+      // canvas.width = res[0].width * dpr
+      // canvas.height = res[0].height * dpr
 
       if(!app.globalData.scaled){
+        const dpr = wx.getSystemInfoSync().pixelRatio
+        canvas.width = res[0].width * dpr
+        canvas.height = res[0].height * dpr
         ctx.scale(dpr, dpr)
         app.globalData.scaled = true;
       }
@@ -230,17 +233,17 @@ Page({
         const _temPText = _temp + '℃';
         ctx.fillStyle = "black";
         if (j === '0') {
-          ctx.moveTo(colHalfWidth, (lowMax - _temp) / lowStep + 102);
-          ctx.fillText(_temPText, colHalfWidth, (lowMax - _temp) / lowStep + 90);
+          ctx.moveTo(colHalfWidth, (lowMax - _temp) / lowStep + 112);
+          ctx.fillText(_temPText, colHalfWidth, (lowMax - _temp) / lowStep + 130);
         } else {
-          ctx.lineTo((2 * j + 1) * colHalfWidth, (lowMax - _temp) / lowStep + 102);
-          ctx.fillText(_temPText, (2 * j + 1) * colHalfWidth, (lowMax - _temp) / lowStep + 90);
+          ctx.lineTo((2 * j + 1) * colHalfWidth, (lowMax - _temp) / lowStep + 112);
+          ctx.fillText(_temPText, (2 * j + 1) * colHalfWidth, (lowMax - _temp) / lowStep + 130);
           ctx.stroke();
         }
 
         ctx.fillStyle = "blue";
         ctx.beginPath();
-        ctx.arc((2 * j + 1) * colHalfWidth, (lowMax - _temp) / lowStep + 102, 2, 0, 2 * Math.PI, false);
+        ctx.arc((2 * j + 1) * colHalfWidth, (lowMax - _temp) / lowStep + 112, 2, 0, 2 * Math.PI, false);
         ctx.closePath();
         ctx.fill();
       }
@@ -274,6 +277,10 @@ Page({
         },
 
         selectMyLocation:() => {
+          this.setData({
+            logged: this.data.logged
+          })
+
           if (this.data.ctx) {
             this.data.ctx.clearRect(0, 0, this.data.cWidth, this.data.cHeight);
           }

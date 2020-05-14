@@ -1,33 +1,33 @@
 /* miniprogram/pages/selectCity/selectCity.wxss */
 .search_container{
-  padding:15px;
+  padding:30rpx;
 }
 
 .search_input{
-  width:230px;
+  width:460rpx;
   border: 1px solid grey;
-  height: 32px;
+  height: 64rpx;
   border-radius: 4px;
-  padding: 0 10px;
+  padding: 0 20rpx;
   background:gainsboro;
 }
 
 .collection_container{
-  margin-top:20px;
+  margin-top:40rpx;
 }
 
 .title{
-  padding-left: 10px;
+  padding-left: 20rpx;
   border-bottom: 1px solid rgba(255,255,255,0.7);
 }
 
 .collections{
   display: inline-block;
-  margin: 10px 20px;
+  margin: 20rpx 40rpx;
   box-sizing: border-box;
   text-align: center;
-  height: 32px;
-  line-height: 32px;
-  padding: 0 10px;
+  height: 64rpx;
+  line-height: 64rpx;
+  padding: 0 20rpx;
   border:1px solid #000;
 }

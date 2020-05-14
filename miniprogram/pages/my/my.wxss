@@ -1,65 +1,57 @@
 /* miniprogram/pages/my/my.wxss */
 .not-login-text{
   text-align: center;
-  margin:20px 0;
-}
-
-.collection_management{
-
+  margin:40rpx 0;
 }
 
 .select_container{
   display: flex;
-  padding: 10px;
+  padding: 20rpx;
   justify-content: space-between;
-  height: 60px;
+  height: 120rpx;
   align-items: center;
   border-bottom: 1px solid rgba(0,0,0,0.2);
-  margin-bottom:20px;
+  margin-bottom:40rpx;
 }
 
 .select_button{
-  width: 120px !important;
-  height: 40px !important;
+  width: 240rpx !important;
+  height: 80rpx !important;
 }
 
 .select_button_container{
   display: flex;
-  width: 250px;
+  width: 500rpx;
   justify-content: space-between;
 }
 
 .search_container{
-  margin-bottom: 60px;
-}
-
-.collection_container{
-
+  margin-bottom: 120rpx;
 }
 
 .city_container{
   display: flex;
   box-sizing: border-box;
-  padding-right: 20px;
+  padding-right: 40rpx;
   flex-wrap: wrap;
 }
 
 .city_name{
-  min-width: 80px;
+  min-width: 160rpx;
   text-align: center;
-  height: 32px;
-  line-height: 32px;
+  height: 64rpx;
+  line-height: 64rpx;
   border: 1px solid #000;
-  margin-left: 20px;
-  margin-bottom: 20px;
+  margin-left: 40rpx;
+  margin-bottom: 40rpx;
 }
 
 .collection_title{
-  margin:10px 0;
+  margin:20rpx 0;
 }
 
 .deleteButton{
-  margin-top:20px;
+  margin-top:40rpx;
 }
 
 .selected{
